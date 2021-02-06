@@ -1,0 +1,45 @@
+Sum of number of Digits
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int number=45632;
+		int sum=sumOfIntegers(number);
+		System.out.println("Sum of digits of numbers" + sum);
+		
+		
+	}
+	
+	
+	static int sumOfIntegers(int n){
+	    
+	    int x=0;
+	    
+	    
+	    int reducednumber=n/10;
+	    
+	    if(reducednumber == 0){
+	        return n;
+	     
+	    }
+	        
+	    x=n%10;
+	    
+	    x= x+ sumOfIntegers(reducednumber);     
+	        return (x);
+	    
+	    
+	    
+	}
+	
+	
+}
