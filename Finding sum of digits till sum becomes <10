@@ -1,0 +1,57 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		int number=1234;
+		//int sum=sumOfIntegers(number);
+		int sum=doubledigits(number);
+		System.out.println("Sum of digits of numbers" + sum);
+		
+		
+	}
+	
+	
+	static int doubledigits(int n){
+	    
+	    if (n<10)
+	    return n;
+    	int j=doubledigits(sumOfIntegers(n));
+    	return j;
+	
+    }
+
+	
+	
+	static int sumOfIntegers(int n){
+	    
+	    int x=0;
+	    
+	    
+	    int reducednumber=n/10;
+	    
+	    if(reducednumber == 0){
+	        return n;
+	     
+	    }
+	        
+	    x=n%10;
+	    
+	    x= x+ sumOfIntegers(reducednumber);     
+	        return (x);
+	    
+	    
+	   
+	    
+	    
+	}
+	
+	
+}
